@@ -1,8 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {createServer} from 'miragejs';
-import {App} from './App';
 
+import ReactDOM from 'react-dom';
+
+import {createServer} from 'miragejs';
+
+import {App} from './App';
 
 createServer({
   routes() {
