@@ -22,6 +22,8 @@ createServer({
         }
       ]
     })
+
+    this.post('/transactions')
   }
 })
 
