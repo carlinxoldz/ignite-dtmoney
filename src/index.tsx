@@ -1,35 +1,35 @@
-import React from 'react';
+import React from "react";
 
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 
-import {createServer} from 'miragejs';
+import { createServer } from "miragejs";
 
-import {App} from './App';
+import { App } from "./App";
 
 createServer({
   routes() {
-    this.namespace = 'api';
+    this.namespace = "api";
 
-    this.get('/transactions', () => {
+    this.get("/transactions", () => {
       return [
         {
           id: 1,
-          title: 'transaction 1',
+          title: "transaction 1",
           amount: 400,
-          type: 'deposit',
-          category: 'food',
-          createdAd:new Date()
-        }
-      ]
-    })
+          type: "deposit",
+          category: "food",
+          createdAd: new Date(),
+        },
+      ];
+    });
 
-    this.post('/transactions')
-  }
-})
+    this.post("/transactions");
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

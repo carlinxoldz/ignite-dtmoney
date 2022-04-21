@@ -5,8 +5,8 @@ import { Container } from "./styles";
 
 export function TransactionsTable() {
   useEffect(() => {
-    api.get('/transactions').then(res => console.log(res.data))
-  }, [])
+    api.get("/transactions").then((res) => console.log(res.data));
+  }, []);
 
   return (
     <Container>
@@ -28,7 +28,7 @@ export function TransactionsTable() {
             <td>30/03/2022</td>
           </tr>
           <tr>
-            <td >Aluguel</td>
+            <td>Aluguel</td>
             <td className="withdraw">- R$2.200</td>
             <td>Casa</td>
             <td>15/04/2022</td>
@@ -36,5 +36,5 @@ export function TransactionsTable() {
         </tbody>
       </table>
     </Container>
-  )
+  );
 }
